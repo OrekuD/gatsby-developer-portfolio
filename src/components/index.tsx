@@ -3,3 +3,4 @@ export { default as SEO } from "./SEO/SEO";
 export { default as Header } from "./Header/Header";
 export { default as Banner } from "./Banner/Banner";
 export { default as FeaturedProjects } from "./FeaturedProjects/FeaturedProjects";
+export { default as Sidebar } from "./Sidebar/Sidebar";

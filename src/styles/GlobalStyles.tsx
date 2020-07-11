@@ -50,6 +50,7 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         background-color: ${({ theme: { main } }) => main};
+        color: ${({ theme: { text } }) => text};
     }
 
     button {

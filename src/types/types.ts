@@ -10,6 +10,13 @@ export interface Colors {
 }
 
 export interface SvgProps {
-  color: string;
-  size: string;
+  color?: string;
+  size?: string;
+  bgColor?: string;
+}
+
+export interface SocialLinks {
+  id: string;
+  icon: React.FC;
+  href: string;
 }

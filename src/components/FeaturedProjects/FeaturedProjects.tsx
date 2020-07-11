@@ -24,7 +24,7 @@ const variant = {
 };
 
 const FeturedProjects: React.FC = () => {
-  const { darkTheme } = useContext(Context);
+  //   const { darkTheme } = useContext(Context);
 
   return (
     <Container variants={container} initial="initial" animate="animate">
