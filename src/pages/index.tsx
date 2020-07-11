@@ -1,11 +1,11 @@
 import React from "react";
-import { Layout, SEO, Banner } from "../components";
+import { Layout, SEO, Banner, FeaturedProjects } from "../components";
 
 const App = () => (
   <Layout>
     <SEO />
     <Banner />
-    gdfhgh
+    <FeaturedProjects />
   </Layout>
 );
 

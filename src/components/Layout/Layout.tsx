@@ -4,19 +4,7 @@ import { GlobalStyle } from "../../styles/GlobalStyles";
 import { Container } from "./LayoutStyles";
 import Header from "../Header/Header";
 import { Context } from "../../context/context";
-import { Colors } from "../../types/types";
-
-const dark: Colors = {
-  main: "#021D46",
-  text: "#f8f8f8",
-  secondary: "#FF3E55"
-};
-
-const light: Colors = {
-  main: "#E5E8EF",
-  text: "#021D46",
-  secondary: "#212121"
-};
+import { dark, light } from "../../constants/Colors";
 
 const Layout: React.FC = ({ children }) => {
   const { darkTheme } = useContext(Context);

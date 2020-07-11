@@ -19,9 +19,11 @@ const Header: React.FC = () => {
   const { toggleTheme } = useContext(Context);
   return (
     <Container>
-      <Title variants={variant} animate="animate" initial="initial">
-        Opoku
-      </Title>
+      <Link to="/">
+        <Title variants={variant} animate="animate" initial="initial">
+          Opoku
+        </Title>
+      </Link>
       <Items>
         {MenuItems.map(({ name, path, id }) => (
           <Link to={path}>
