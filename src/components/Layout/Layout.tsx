@@ -1,26 +1,32 @@
-import React from "react";
+import React, { useContext } from "react";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "../../styles/GlobalStyles";
+import { Container } from "./LayoutStyles";
+import Header from "../Header/Header";
+import { Context } from "../../context/context";
+import { Colors } from "../../types/types";
 
-const dark = true;
-const theme = {
-  dark: {
-    main: "#021D46",
-    text: "#f8f8f8",
-    secondary: "#FF3E55"
-  },
-  light: {
-    main: "#ffffff",
-    text: "#021D46",
-    secondary: "#212121"
-  }
+const dark: Colors = {
+  main: "#021D46",
+  text: "#f8f8f8",
+  secondary: "#FF3E55"
+};
+
+const light: Colors = {
+  main: "#E5E8EF",
+  text: "#021D46",
+  secondary: "#212121"
 };
 
 const Layout: React.FC = ({ children }) => {
+  const { darkTheme } = useContext(Context);
   return (
-    <ThemeProvider theme={dark ? theme.dark : theme.light}>
+    <ThemeProvider theme={darkTheme ? dark : light}>
       <GlobalStyle />
-      {children}
+      <Container>
+        <Header />
+        {children}
+      </Container>
     </ThemeProvider>
   );
 };
