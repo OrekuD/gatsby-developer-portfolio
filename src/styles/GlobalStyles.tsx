@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle, css } from "styled-components";
 import { motion } from "framer-motion";
 import JosefinSB from "../fonts/JosefinSans-SemiBold.ttf";
 import JosefinR from "../fonts/JosefinSans-Regular.ttf";
@@ -67,19 +67,27 @@ export const GlobalStyle = createGlobalStyle`
 
 export const TitleContainer = styled.div`
   display: flex;
-  margin: 30px 0;
+  margin: 50px 0;
   align-items: center;
   align-self: flex-end;
 `;
 
 export const Title = styled(motion.p)`
   font-family: "JosefinR";
-  font-size: 20px;
+  font-size: 18px;
   margin-right: 18px;
+  text-transform: uppercase;
+
+  ${props =>
+    props.marginLeft &&
+    css`
+      margin-right: 0px;
+      margin-left: 18px;
+    `}
 `;
 
 export const HorizontalLine = styled.div`
   width: 100px;
-  height: 2px;
+  height: 3px;
   background-color: ${({ theme: { secondary } }) => secondary};
 `;

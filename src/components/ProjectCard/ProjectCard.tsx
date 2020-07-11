@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import {
   Container,
   ProjectDetails,
@@ -10,27 +11,6 @@ import {
 } from "./ProjectCardStyles";
 import { ProjectProps } from "../../types/types";
 
-const container = {
-  initial: { opacity: 0 },
-  animate: {
-    opacity: 1,
-    transition: {
-      duration: 0,
-      when: "beforeChildren",
-      staggerChildren: 0.4
-    }
-  }
-};
-
-const variant = {
-  initial: { y: 20, opacity: 0 },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: { duration: 0.8, type: "tween" }
-  }
-};
-
 interface Props {
   data: ProjectProps;
   index: number;
@@ -38,15 +18,10 @@ interface Props {
 
 const ProjectCard: React.FC<Props> = ({ data, index }) => {
   //   const { darkTheme } = useContext(Context);
-  const { name, description, stack, github, url } = data;
+  const { name, description, stack, github, url, image } = data;
 
   return (
-    <Container
-      // variants={container}
-      // initial="initial"
-      // animate="animate"
-      left={index % 2 === 0}
-    >
+    <Container left={index % 2 === 0}>
       <ProjectDetails>
         <div>
           <ProjectName>{name}</ProjectName>
@@ -60,7 +35,20 @@ const ProjectCard: React.FC<Props> = ({ data, index }) => {
           ))}
         </Stack>
       </ProjectDetails>
-      <ProjectImage></ProjectImage>
+      <ProjectImage>
+        <motion.img
+          initial={{ scale: 1 }}
+          whileHover={{
+            scale: 1.02,
+            transition: {
+              duration: 0.4,
+              ease: "easeInOut"
+            }
+          }}
+          src={image}
+          alt="Project"
+        />
+      </ProjectImage>
     </Container>
   );
 };

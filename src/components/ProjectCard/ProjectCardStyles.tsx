@@ -29,7 +29,13 @@ export const ProjectDetails = styled.div`
 export const ProjectImage = styled.div`
   width: 460px;
   height: 100%;
-  background-color: maroon;
+  overflow: hidden;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 `;
 
 export const ProjectName = styled.p`
@@ -58,12 +64,13 @@ export const Badge = styled.div`
   align-items: center;
   justify-content: center;
   background-color: ${({ theme: { main } }) => main};
-  margin: 0 10px 10px 0;
+  margin-right: 10px;
 
   p {
     color: ${({ theme: { text } }) => text};
     text-transform: uppercase;
     font-size: 12px;
     font-family: "JosefinR";
+    margin-top: 2px;
   }
 `;

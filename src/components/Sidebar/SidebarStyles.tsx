@@ -5,7 +5,7 @@ export const Container = styled(motion.div)`
   position: fixed;
   bottom: 0;
   left: 0;
-  height: 400px;
+  height: 370px;
   width: 70px;
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@ export const Title = styled(motion.div)`
 `;
 
 export const Icons = styled(motion.div)`
-  height: 150px;
+  height: 120px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -37,8 +37,8 @@ export const Icons = styled(motion.div)`
 
 export const VerticalLine = styled.div`
   height: 100px;
-  width: 2px;
-  background-color: ${({ theme: { text } }) => text};
+  width: 3px;
+  background-color: ${({ theme: { secondary } }) => secondary};
   margin: 0;
 `;
 

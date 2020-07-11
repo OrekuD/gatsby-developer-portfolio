@@ -68,16 +68,6 @@ const Sidebar: React.FC = () => {
             bgColor={darkTheme ? dark.main : light.main}
           />
         </Icon>
-        <Icon
-          variants={icon}
-          href="/"
-          whileHover={{
-            scale: 1.1,
-            transition: { duration: 0.6, ease: [0.6, 0.05, -0.01, 0.9] }
-          }}
-        >
-          <Github size="24px" color={darkTheme ? dark.text : light.text} />
-        </Icon>
       </Icons>
     </Container>
   );

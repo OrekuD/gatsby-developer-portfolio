@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "./ProjectsStyles";
+import { Container, Item } from "./ProjectsStyles";
 import { ProjectProps } from "../../types/types";
 import ProjectCard from "../ProjectCard/ProjectCard";
 
@@ -29,16 +29,12 @@ interface Props {
 }
 
 const Projects: React.FC<Props> = ({ data }) => {
-  //   const { darkTheme } = useContext(Context);
-
   return (
-    <Container
-    // variants={container}
-    // initial="initial"
-    // animate="animate"
-    >
+    <Container variants={container} initial="initial" animate="animate">
       {data.map((item, index) => (
-        <ProjectCard data={item} key={index} index={index} />
+        <Item variants={variant}>
+          <ProjectCard data={item} key={index} index={index} />
+        </Item>
       ))}
     </Container>
   );

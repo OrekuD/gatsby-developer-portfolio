@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 import { Context } from "../../context/context";
 
 const variant = {
-  initial: { y: 30, opacity: 0 },
+  initial: { y: 5, opacity: 0 },
   animate: {
     y: 0,
     opacity: 1,

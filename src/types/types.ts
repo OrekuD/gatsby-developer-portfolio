@@ -26,7 +26,7 @@ export interface ProjectProps {
   featured?: boolean;
   url?: string;
   github?: string;
-  image?: React.FC;
+  image: string;
   description: string;
   stack: Array<{ id: string; name: string }>;
 }

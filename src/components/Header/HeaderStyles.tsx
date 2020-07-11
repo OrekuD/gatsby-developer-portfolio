@@ -33,7 +33,7 @@ export const Item = styled(motion.p)`
     width: 0;
     right: 0;
     height: 3px;
-    background-color: ${({ theme }) => theme.text};
+    background-color: ${({ theme: { secondary } }) => secondary};
     transition: 0.4s ease;
   }
 

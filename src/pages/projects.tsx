@@ -7,8 +7,8 @@ const ProjectsPage: React.FC = () => {
   return (
     <Layout>
       <TitleContainer>
-        <Title>All projects</Title>
         <HorizontalLine />
+        <Title marginLeft>All projects</Title>
       </TitleContainer>
       <Projects data={projects} />
     </Layout>
