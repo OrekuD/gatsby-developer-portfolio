@@ -17,6 +17,7 @@ export const Subtitle = styled(motion.h6)`
   font-family: "JosefinT";
   margin: 20px 0;
   font-size: 18px;
+  line-height: 22px;
 `;
 
 export const Button = styled(motion.div)`

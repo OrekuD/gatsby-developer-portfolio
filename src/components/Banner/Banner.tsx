@@ -3,7 +3,7 @@ import { Container, Title, Subtitle, Button } from "./BannerStyles";
 import { aboutMe, skillSet } from "../../data/about";
 import { Context } from "../../context/context";
 import { motion } from "framer-motion";
-import { dark, light } from "../../constants/Colors";
+import { light } from "../../constants/Colors";
 
 const container = {
   initial: { opacity: 0 },
@@ -31,7 +31,7 @@ const Banner: React.FC = () => {
   const [hovered, setHovered] = useState(false);
   return (
     <Container variants={container} initial="initial" animate="animate">
-      <Title variants={variant}>Hi I'm David,</Title>
+      <Title variants={variant}>Hi, I'm David</Title>
       <Subtitle variants={variant}>{aboutMe}</Subtitle>
       <Subtitle variants={variant}>{skillSet}</Subtitle>
 

@@ -20,3 +20,13 @@ export interface SocialLinks {
   icon: React.FC;
   href: string;
 }
+
+export interface ProjectProps {
+  name: string;
+  featured?: boolean;
+  url?: string;
+  github?: string;
+  image?: React.FC;
+  description: string;
+  stack: Array<{ id: string; name: string }>;
+}

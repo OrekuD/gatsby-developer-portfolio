@@ -2,7 +2,9 @@
 // import Youtube from "../images/projects/youtube.png"
 // import Chat from "../images/projects/chat.jpg"
 
-export const projects = [
+import { ProjectProps } from "../types/types";
+
+export const projects: Array<ProjectProps> = [
   {
     name: "Chat app",
     featured: true,
@@ -10,7 +12,7 @@ export const projects = [
     github: "https://github.com/OrekuD/react-chat-app",
     // image: Chat,
     description:
-      "Consequat cupidatat velit elit velit. Lorem dolor Lorem ut nulla qui qui ex labore laboris tempor elit. In velit Lorem amet laboris irure ea excepteur irure amet ad.",
+      "Veniam nulla ullamco ullamco occaecat. Non exercitation adipisicing voluptate proident irure in amet amet excepteur.",
     stack: [
       { id: "0", name: "socket.io" },
       { id: "1", name: "React" },
@@ -25,7 +27,7 @@ export const projects = [
     github: "https://github.com/OrekuD/react-recipes-app",
     // image: Recipes,
     description:
-      "Consectetur dolor amet sit aliquip labore. Esse in do sunt id sit. Lorem non cupidatat velit ut adipisicing ex laborum commodo amet culpa id cillum. Laborum enim reprehenderit culpa elit consequat occaecat.",
+      "Sit in nulla culpa est sunt commodo mollit. Exercitation Lorem laboris quis exercitation voluptate dolore.",
     stack: [
       { id: "0", name: "React" },
       { id: "1", name: "Html" },
@@ -39,7 +41,7 @@ export const projects = [
     github: "https://github.com/OrekuD/react-youtube-clone",
     // image: Youtube,
     description:
-      "Consequat cupidatat velit elit velit. Lorem dolor Lorem ut nulla qui qui ex labore laboris tempor elit. In velit Lorem amet laboris irure ea excepteur irure amet ad.",
+      "In minim occaecat ullamco ea dolore sunt officia. Adipisicing est aliquip fugiat tempor fugiat quis pariatur tempor esse anim.",
     stack: [
       { id: "0", name: "React" },
       { id: "1", name: "Html" },

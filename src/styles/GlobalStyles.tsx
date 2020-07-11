@@ -1,4 +1,5 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+import { motion } from "framer-motion";
 import JosefinSB from "../fonts/JosefinSans-SemiBold.ttf";
 import JosefinR from "../fonts/JosefinSans-Regular.ttf";
 import JosefinM from "../fonts/JosefinSans-Medium.ttf";
@@ -62,4 +63,23 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
 
+`;
+
+export const TitleContainer = styled.div`
+  display: flex;
+  margin: 30px 0;
+  align-items: center;
+  align-self: flex-end;
+`;
+
+export const Title = styled(motion.p)`
+  font-family: "JosefinR";
+  font-size: 20px;
+  margin-right: 18px;
+`;
+
+export const HorizontalLine = styled.div`
+  width: 100px;
+  height: 2px;
+  background-color: ${({ theme: { secondary } }) => secondary};
 `;

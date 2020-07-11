@@ -1,6 +1,12 @@
-import React, { useContext } from "react";
-import { Container, Title } from "./FeaturedProjectsStyles";
-import { Context } from "../../context/context";
+import React from "react";
+import { Container } from "./FeaturedProjectsStyles";
+import {
+  Title,
+  HorizontalLine,
+  TitleContainer
+} from "../../styles/GlobalStyles";
+import { projects } from "../../data/projects";
+import Projects from "../Projects/Projects";
 
 const container = {
   initial: { opacity: 0 },
@@ -28,7 +34,11 @@ const FeturedProjects: React.FC = () => {
 
   return (
     <Container variants={container} initial="initial" animate="animate">
-      <Title variants={variant}>Featured projects</Title>
+      <TitleContainer>
+        <Title variants={variant}>Featured projects</Title>
+        <HorizontalLine />
+      </TitleContainer>
+      <Projects data={projects.filter(project => project.featured)} />
     </Container>
   );
 };

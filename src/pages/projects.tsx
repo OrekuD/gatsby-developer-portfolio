@@ -1,8 +1,18 @@
 import React from "react";
-import { Layout } from "../components";
+import { Layout, Projects } from "../components";
+import { projects } from "../data/projects";
+import { Title, HorizontalLine, TitleContainer } from "../styles/GlobalStyles";
 
-const Projects: React.FC = () => {
-  return <Layout></Layout>;
+const ProjectsPage: React.FC = () => {
+  return (
+    <Layout>
+      <TitleContainer>
+        <Title>All projects</Title>
+        <HorizontalLine />
+      </TitleContainer>
+      <Projects data={projects} />
+    </Layout>
+  );
 };
 
-export default Projects;
+export default ProjectsPage;

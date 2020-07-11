@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Container, Title, Icons, Icon, VerticalLine } from "./SidebarStyles";
-import { Github, TwitterOutline, Twitter, LinkedIn } from "../../svg/Svgs";
+import { Github, Twitter, LinkedIn } from "../../svg/Svgs";
 import { Context } from "../../context/context";
 import { dark, light } from "../../constants/Colors";
 
@@ -34,20 +34,48 @@ const Sidebar: React.FC = () => {
       </Title>
       <VerticalLine />
       <Icons variants={iconsContainer} initial="initial" animate="animate">
-        <Icon variants={icon}>
+        <Icon
+          variants={icon}
+          href="/"
+          whileHover={{
+            scale: 1.1,
+            transition: { duration: 0.6, ease: [0.6, 0.05, -0.01, 0.9] }
+          }}
+        >
           <Github size="24px" color={darkTheme ? dark.text : light.text} />
         </Icon>
-        <Icon variants={icon}>
+        <Icon
+          variants={icon}
+          href="/"
+          whileHover={{
+            scale: 1.1,
+            transition: { duration: 0.6, ease: [0.6, 0.05, -0.01, 0.9] }
+          }}
+        >
           <Twitter size="28px" color={darkTheme ? dark.text : light.text} />
         </Icon>
-        <Icon variants={icon}>
+        <Icon
+          variants={icon}
+          href="/"
+          whileHover={{
+            scale: 1.1,
+            transition: { duration: 0.6, ease: [0.6, 0.05, -0.01, 0.9] }
+          }}
+        >
           <LinkedIn
             size="24px"
             color={darkTheme ? dark.text : light.text}
             bgColor={darkTheme ? dark.main : light.main}
           />
         </Icon>
-        <Icon variants={icon}>
+        <Icon
+          variants={icon}
+          href="/"
+          whileHover={{
+            scale: 1.1,
+            transition: { duration: 0.6, ease: [0.6, 0.05, -0.01, 0.9] }
+          }}
+        >
           <Github size="24px" color={darkTheme ? dark.text : light.text} />
         </Icon>
       </Icons>

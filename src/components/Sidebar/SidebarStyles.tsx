@@ -42,4 +42,6 @@ export const VerticalLine = styled.div`
   margin: 0;
 `;
 
-export const Icon = styled(motion.a)``;
+export const Icon = styled(motion.a)`
+  cursor: pointer;
+`;
